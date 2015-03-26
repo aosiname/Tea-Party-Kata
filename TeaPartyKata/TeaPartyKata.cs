@@ -8,31 +8,28 @@ namespace TeaPartyKata
     public class TeaPartyKata
     {
         private SocialEvent se;
+        private Guest g;
 
         public TeaPartyKata()
         {
             se = new SocialEvent();
+            g = new Guest();
         }
 
         [TestMethod]
         public void SocialEventHasGuestList()
         {
             var guestList = se.getGuestList();
-            Assert.IsInstanceOfType(guestList, typeof(List<string>));
+            Assert.IsInstanceOfType(guestList, typeof(List<Guest>));
         }
 
         [TestMethod]
         public void addGuest()
         {
-            se.addGuest("Andrew");
+            se.addGuest(g);
             Assert.AreEqual(1, se.getGuestList().Count);
         }
 
-        [TestMethod]
-        public void GuestListIsNotEmpty()
-        {
-            int countGuestList = se.getGuestList().Count;
-            Assert.IsTrue(countGuestList >= 0);
-        }
+
     }
 }

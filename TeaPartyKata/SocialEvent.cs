@@ -7,9 +7,28 @@ namespace TeaPartyKata
 {
     class SocialEvent
     {
-        internal List<string> getGuestList()
+        private List<Guest> guests;
+
+        public SocialEvent()
         {
-            return new List<string>();
+            guests = new List<Guest>();
+        }
+
+        public void addGuest(string g)
+        {
+            //guests.Add(g);
+        }
+
+        internal List<Guest> getGuestList()
+        {
+            return this.guests;
+        }
+
+
+
+        internal void addGuest(Guest g)
+        {
+            guests.Add(g);
         }
     }
 }
