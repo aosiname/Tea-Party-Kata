@@ -9,6 +9,7 @@ namespace TeaPartyKata
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
