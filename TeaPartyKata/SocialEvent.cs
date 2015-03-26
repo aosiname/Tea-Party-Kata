@@ -24,8 +24,6 @@ namespace TeaPartyKata
             return this.guests;
         }
 
-
-
         internal void addGuest(Guest g)
         {
             guests.Add(g);
